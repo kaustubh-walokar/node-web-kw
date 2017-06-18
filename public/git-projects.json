@@ -1,0 +1,44 @@
+{
+  "projects": [
+    {
+      "name": "Spartan Drive",
+      "link": "https://github.com/kaustubh-walokar/spartanDrive",
+      "description":"A file sharing app native to Android created using AWS S3 & Parse push on Android SDK 4.4 and above"
+    },
+    {
+      "name": "State Based Crdt",
+      "link": "https://github.com/kaustubh-walokar/crdt-state-based",
+      "description":"A state based CRDT to demonstrate working of a counter in a Eventually Consistent system designed for AP in the CAP theorem."
+    },
+    {
+      "name": "GRPC Pollling Service",
+      "link": "https://github.com/kaustubh-walokar/grpc-poll-service",
+      "description":"A small project with GoogleRPC framework and Protocol buffers used for serialisation and deserialisation."
+    },
+    {
+      "name": "Facebook TimeMachine",
+      "link": "https://github.com/teamProjectAlpha/facebook-timemeachine",
+      "description":"Facebook Time Machine - Imports media and related metadata from facebook to store it separately on private cloud"
+    },
+    {
+      "name": "MOOC Distributed System",
+      "link": "https://github.com/kaustubh-walokar/mooc-dist-server",
+      "description":"A fault tolerant, consistent and scalable distributed System based on Raft."
+    },
+    {
+      "name": "Arkanoid",
+      "link": "https://github.com/kaustubh-walokar/Arkanoid",
+      "description":"An arkanoid game in Unity2D, following Scrum Agile Development Model and using design patterns like Observer, Factory, Decorator, Command, Strategy."
+    },
+    {
+      "name": "YouTube Clone - myTube",
+      "link": "https://github.com/kaustubh-walokar/myTube",
+      "description":"A Youtube clone to demonstrate Youtube Player Api and google Api for Oauth"
+    },
+    {
+      "name": "Distributed Graph Processing",
+      "link": "https://github.com/meethai/mithai",
+      "description":"A distributed graph processing framework for next-gen IoT devices"
+    }
+  ]
+}
