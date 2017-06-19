@@ -17,36 +17,36 @@ const cert = require('./cert.js');
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '443');
+var port = normalizePort(process.env.PORT || '8080');
 app.set('port', port);
 
 
-if(cluster.isMaster){
-  console.log(`Master running pid:${process.pid}`);
+// if(cluster.isMaster){
+//   console.log(`Master running pid:${process.pid}`);
 
-  // Fork workers.
-  for (let i = 0; i < numCPUs; i++) {
-    cluster.fork();
-  }
+//   // Fork workers.
+//   for (let i = 0; i < numCPUs; i++) {
+//     cluster.fork();
+//   }
   
-  cluster.on('online', function(worker) {
-    console.log('Worker ' + worker.process.pid + ' is online');
-  });
+//   cluster.on('online', function(worker) {
+//     console.log('Worker ' + worker.process.pid + ' is online');
+//   });
 
-  cluster.on('exit', function(worker, code, signal) {
-    console.log('Worker ' + worker.process.pid + ' died with code: ' + code + ', and signal: ' + signal);
-    console.log('Starting a new worker');
-    cluster.fork();
-  });
-}
-else{
+//   cluster.on('exit', function(worker, code, signal) {
+//     console.log('Worker ' + worker.process.pid + ' died with code: ' + code + ', and signal: ' + signal);
+//     console.log('Starting a new worker');
+//     cluster.fork();
+//   });
+// }
+// else{
 
   /**
    * Create HTTPS server.
    */
 
-  var httpServer = http.createServer(require('redirect-https')());
-  httpServer.listen(80,function () {
+  var httpServer = http.createServer(require('redirect-https')({port:port}));
+  httpServer.listen(8081,function () {
     debug("http redirection server on: ", this.address());
   });
 
@@ -60,7 +60,7 @@ else{
   server.on('error', onError);
   server.on('listening', onListening);
   
-}
+//}
 
 /**
  * Normalize a port into a number, string, or false.
